@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Item Books Catalog</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <!-- Animated Background Container -->
+  <div class="background-container">
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <div class="clouds"></div>
+  </div>
+
+  <!-- Particle Effect Container -->
+  <div class="particle-container"></div>
+
+  <!-- Fixed Navbar & Header -->
+  <header>
+    <nav class="navbar slide-down">
+      <div class="navbar-content">
+        <div class="logo">
+          <h1>Item Books</h1>
+        </div>
+        <div class="nav-links">
+          <a href="#catalog">Catalog</a>
+          <a href="#addItemSection">Add Item</a>
+          <a href="#footer">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <div class="header-content">
+      <h2>Welcome to Item Books</h2>
+      <p>Your interactive encyclopedia of mystical items from our AR Dungeon Scavenger Tower Defense world.</p>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Controls Section -->
+    <section id="controls">
+      <input type="text" id="searchInput" placeholder="Search items..." aria-label="Search items" />
+      <select id="filterSelect" aria-label="Filter by category">
+        <option value="all">All Categories</option>
+        <option value="shard">Shard</option>
+        <option value="tower">Tower</option>
+        <option value="enemy">Enemy</option>
+        <option value="tool">Tool</option>
+        <option value="potion">Potion</option>
+        <option value="scroll">Scroll</option>
+      </select>
+      <button id="sortButton">Sort by Name</button>
+      <input type="number" id="minValue" placeholder="Min Value" aria-label="Minimum value" />
+      <input type="number" id="maxValue" placeholder="Max Value" aria-label="Maximum value" />
+      <button id="valueFilterButton">Filter by Value</button>
+      <button id="shuffleButton">Shuffle</button>
+      <button id="resetButton">Reset</button>
+      <button id="groupToggleButton">Toggle Group View</button>
+    </section>
+
+    <!-- Catalog Display Section -->
+    <section id="catalog">
+      <!-- Dynamic item cards are injected here -->
+    </section>
+
+    <!-- Add New Item Form -->
+    <section id="addItemSection">
+      <h2>Add New Item</h2>
+      <form id="addItemForm">
+        <input type="text" id="itemName" placeholder="Item Name" required />
+        <select id="itemCategory" required>
+          <option value="" disabled selected>Select Category</option>
+          <option value="shard">Shard</option>
+          <option value="tower">Tower</option>
+          <option value="enemy">Enemy</option>
+          <option value="tool">Tool</option>
+          <option value="potion">Potion</option>
+          <option value="scroll">Scroll</option>
+        </select>
+        <input type="text" id="itemDescription" placeholder="Description" required />
+        <input type="number" id="itemValue" placeholder="Value" required />
+        <select id="itemRarity" required>
+          <option value="" disabled selected>Select Rarity</option>
+          <option value="common">Common</option>
+          <option value="rare">Rare</option>
+          <option value="epic">Epic</option>
+        </select>
+        <input type="number" id="itemRating" placeholder="Rating (1-5)" min="1" max="5" required />
+        <input type="text" id="itemElement" placeholder="Element (fire, ice, etc.)" required />
+        <input type="text" id="itemBonus" placeholder="Bonus Effect" required />
+        <button type="submit">Add Item</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p>© 2025 Item Books Catalog. All rights reserved.</p>
+  </footer>
+</body>
+</html>
